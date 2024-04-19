@@ -10,7 +10,7 @@ let interval
 let minutes = 0
 let seconds = 0
 let milliseconds = 0
-let isPaused = false
+let isPaused  = false
 
 startBtn.addEventListener("click", startTime)
 pauseBtn.addEventListener("click", pauseTime)
@@ -37,11 +37,14 @@ function startTime(){
     }, 10)
     startBtn.style.display= "none"
     pauseBtn.style.display = "block"
+    reseBtn.style.display = "block"
 }
 function pauseTime(){
     isPaused = true
     pauseBtn.style.display = "none"
     resumeBtn.style.display = "block"
+    reseBtn.style.display = "block"
+
 
 }
 
@@ -50,13 +53,16 @@ function resumeTime()
     isPaused = false
     resumeBtn.style.display= "none"
     pauseBtn.style.display = "block"
+   
 }
 
 function reseTime(){
     clearInterval(interval)
-    milliseconds = 0
-    seconds = 0
+   
     minutes = 0
+    seconds = 0
+    milliseconds = 0
+    isPaused = false
 
     minutesEl.textContent= "00"
     secondsEl.textContent = "00"

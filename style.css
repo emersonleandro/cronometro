@@ -11,6 +11,7 @@
     padding-top: 3rem;
     background-color: #f1f1f1f1;
     height: 100vh;
+    padding-bottom: auto;
 }
 .container h1{
     color: #175cff;
@@ -77,6 +78,9 @@ footer > p {
     color: white;
     text-align: center;
     background-color: rgb(13, 0, 127);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 .a{
     font-family: Arial, Helvetica, sans-serif;
